@@ -23,5 +23,5 @@ jobs:
         name: Products
         path: SmartWallet/artifact
     - name: test
-      run: xcodebuild -workspace SmartWallet.xcworkspace -scheme $SCHEME -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.6' test-without-building
+      run: xcodebuild -workspace SmartWallet.xcworkspace -scheme $SCHEME -sdk iphonesimulator -destination 'platform=iOS Simulator,name=$DEVICE' test
 
