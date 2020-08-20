@@ -15,14 +15,14 @@ jobs:
       DEVICE: "iPhone 11"
     steps:
     - uses: actions/checkout@v2
-    - name: clean
-      run: xcodebuild clean -scheme $SCHEME -destination "platform=iOS Simulator,name=$DEVICE"
-    - name: Upload products
-      uses: actions/upload-artifact@v1
-      with:
-        name: Products
-        path: SmartWallet/artifact
+#     - name: clean
+#       run: xcodebuild clean -scheme $SCHEME -destination "platform=iOS Simulator,name=$DEVICE"
+#     - name: Upload products
+#       uses: actions/upload-artifact@v1
+#       with:
+#         name: Products
+#         path: SmartWallet/artifact
     - name: test
       #run: xcodebuild -workspace SmartWallet.xcworkspace -scheme $SCHEME -sdk iphonesimulator -destination 'platform=iOS Simulator,name=$DEVICE' test
-      run: xcodebuild SmartWallet.xcodeproj -scheme $SCHEME -sdk iphonesimulator -destination 'platform=iOS Simulator,name=$DEVICE' test
+      run: xcodebuild test-without-building -xctestrun $(find . -type f -name "*.xctestrun") -destination "platform=iOS Simulator,name=$DEVICE"
 
