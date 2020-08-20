@@ -29,4 +29,10 @@ jobs:
 #     - name: test
 #       run: xcodebuild test-without-building -project SmartWallet.xcodeproj -scheme "SmartWalletUITests" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 11,OS=13.6" 
       #run: xcodebuild -workspace SmartWallet.xcworkspace -scheme "SmartWalletUITests" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 11,OS=13.6" test-without-building
-
+    - name: GitHub Action for Trello
+      uses: awais786327/ifttt-action@v1.0
+      with:
+        # number of milliseconds to wait
+        milliseconds: 500 # default is 1000
+        # Your secret IFTTT webhooks key
+        key: secret? # default is EoNxVmkmo3cxJQct-8MvT
