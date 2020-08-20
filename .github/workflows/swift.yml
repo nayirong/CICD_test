@@ -13,6 +13,8 @@ jobs:
     env:
       SCHEME: "SmartWallet"
       DEVICE: "iPhone 11"
+      DERIVED_DATA_PATH: "DerivedData"
+#       UNIT_TEST_TARGET: "SmartWalletTests"
     steps:
     - uses: actions/checkout@v2
 #     - name: clean
@@ -24,7 +26,7 @@ jobs:
 #         path: SmartWallet/artifact
     - name: test
       #run: xcodebuild -workspace SmartWallet.xcworkspace -scheme $SCHEME -sdk iphonesimulator -destination 'platform=iOS Simulator,name=$DEVICE' test
-      run: xcodebuild -workspace SmartWallet.xcworkspace -scheme "SmartWalletUITests" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 11,OS=13.6" test-without-building
-
+      #run: xcodebuild -workspace SmartWallet.xcworkspace -scheme "SmartWalletUITests" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 11,OS=13.6" test-without-building
+      run: xcodebuild test-without-building -workspace SmartWallet.xcworkspace -scheme "SmartWalletUITests" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 11,OS=13.6" -derivedDataPath $DERIVED_DATA_PATH -enableCodeCoverage YES
 
 
