@@ -15,9 +15,9 @@ class SmartWalletUITests: XCTestCase {
 		super.setUp()
 		continueAfterFailure = false
 
-		let app = XCUIApplication()
+		//let app = XCUIApplication()
 		//setupSnapshot(app)
-		app.launch()
+		//app.launch()
     }
 
     override func tearDown() {
