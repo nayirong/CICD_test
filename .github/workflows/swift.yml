@@ -17,18 +17,27 @@ jobs:
 #       UNIT_TEST_TARGET: "SmartWalletTests"
     steps:
     - uses: actions/checkout@v2
-    - name: Force Xcode 11
+    - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_11.3.app
-#     - name: clean
-#       run: xcodebuild clean -scheme $SCHEME -destination "platform=iOS Simulator,name=$DEVICE"
+    - name: clean
+      run: xcodebuild clean -scheme $SCHEME -destination "platform=iOS Simulator,name=$DEVICE"
 #     - name: Upload products
 #       uses: actions/upload-artifact@v1
 #       with:
 #         name: Products
 #         path: SmartWallet/artifact
-    - name: test
-      run: xcodebuild test-without-building -project SmartWallet.xcodeproj -scheme "SmartWalletUITests" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 11,OS=13.6" 
+#     - name: test
+#       run: xcodebuild test-without-building -project SmartWallet.xcodeproj -scheme "SmartWalletUITests" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 11,OS=13.6" 
       #run: xcodebuild -workspace SmartWallet.xcworkspace -scheme "SmartWalletUITests" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 11,OS=13.6" test-without-building
-      #run: xcodebuild test-without-building -workspace SmartWallet.xcworkspace -scheme "SmartWalletUITests" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 11,OS=13.6" -derivedDataPath $DERIVED_DATA_PATH -enableCodeCoverage YES
-
+    - name: Build Archive
+      run : |
+        xcodebuild -sdk iphoneos -workspace SmartWallet.xcworkspace \
+        -configuration Release -scheme $SCHEME -derivedDataPath DerivedData \
+        -archivePath DerivedData/Archive/SmartWallet archive
+    - name: Export Archive
+      run: |
+        xcodebuild -exportArchive \
+        -archivePath DerivedData/Archive/SmartWallet.xcarchive \
+        -exportOptionsPlist provisioning/App-Store.plist \
+        -exportPath DerivedData/ipa
 
