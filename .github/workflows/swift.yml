@@ -10,11 +10,14 @@ jobs:
   build:
 
     runs-on: macos-latest
-
+    env:
+      SCHEME: "SmartWallet"
+      DEVICE: "iPhone 11"
+      DERIVED_DATA_PATH: "DerivedData"
     steps:
     - uses: actions/checkout@v2
     - name: Build
       #run: swift build -v
-      run: xcodebuild clean -scheme SmartWallet -destination $DESTINATION -derivedDataPath $DERIVED_DATA_PATH build-for-testing
+      run: xcodebuild clean -scheme $SCHEME -destination "platform=iOS Simulator,name=$DEVICE" #-derivedDataPath $DERIVED_DATA_PATH build-for-testing
     - name: Run tests
       run: swift test -v
