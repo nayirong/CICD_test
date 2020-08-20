@@ -15,5 +15,8 @@ jobs:
       DEVICE: "iPhone 11"
     steps:
     - uses: actions/checkout@v2
-    - name: clean and test
+    - name: clean
       run: xcodebuild clean -scheme $SCHEME -destination "platform=iOS Simulator,name=$DEVICE"
+    - name: test
+      run: xcodebuild -workspace SmartWallet.xcworkspace -scheme $SCHEME -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.6' test
+
