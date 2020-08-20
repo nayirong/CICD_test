@@ -18,31 +18,32 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build
       #run: swift build -v
-      run: xcodebuild clean -scheme $SCHEME -destination "platform=iOS Simulator,name=$DEVICE" -derivedDataPath $DERIVED_DATA_PATH build-for-testing
-    - name: Upload products
-      uses: actions/upload-artifact@v1
-      with:
-        name: Products
-        path: DerivedData/Build/Products
+      run: |
+        set -o pipefail && xcodebuild clean -scheme $SCHEME -destination "platform=iOS Simulator,name=$DEVICE" -derivedDataPath $DERIVED_DATA_PATH build-for-testing | xcpretty --color --simple
+#     - name: Upload products
+#       uses: actions/upload-artifact@v1
+#       with:
+#         name: Products
+#         path: DerivedData/Build/Products
 
-  unit_test:
-    name: Unit Test
-    env:
-      DEVICE: "iPhone 11"
-      DERIVED_DATA_PATH: "DerivedData"
-      UNIT_TEST_TARGET: "SmartWalletTests"
-    runs-on: macOS-latest
-    steps:
-    - name: Checkout project
-      uses: actions/checkout@v1
-    - name: Download products
-      uses: actions/download-artifact@v1
-      with:
-        name: Products
-    - name: Run tests
-      run: xcodebuild test-without-building xctestrun $(find . -type f -name "*.xctestrun") -destination "platform=iOS Simulator,name=$DEVICE" -derivedDataPath $DERIVED_DATA_PATH -enableCodeCoverage YES -only-testing:$UNIT_TEST_TARGET
-    - name: Upload test logs
-      uses: actions/upload-artifact@v1
-      with:
-        name: TestLogs
-        path: DerivedData/Logs/Test
+#   unit_test:
+#     name: Unit Test
+#     env:
+#       DEVICE: "iPhone 11"
+#       DERIVED_DATA_PATH: "DerivedData"
+#       UNIT_TEST_TARGET: "SmartWalletTests"
+#     runs-on: macOS-latest
+#     steps:
+#     - name: Checkout project
+#       uses: actions/checkout@v1
+#     - name: Download products
+#       uses: actions/download-artifact@v1
+#       with:
+#         name: Products
+#     - name: Run tests
+#       run: xcodebuild test-without-building xctestrun $(find . -type f -name "*.xctestrun") -destination "platform=iOS Simulator,name=$DEVICE" -derivedDataPath $DERIVED_DATA_PATH -enableCodeCoverage YES -only-testing:$UNIT_TEST_TARGET
+#     - name: Upload test logs
+#       uses: actions/upload-artifact@v1
+#       with:
+#         name: TestLogs
+#         path: DerivedData/Logs/Test
