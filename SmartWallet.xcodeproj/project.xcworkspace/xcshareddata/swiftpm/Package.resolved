@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "FontAwesome",
+        "repositoryURL": "https://github.com/thii/FontAwesome.swift.git",
+        "state": {
+          "branch": "master",
+          "revision": "d5cb8ca99cc1e1a0ab51f6f284001872804a921c",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

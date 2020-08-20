@@ -41,7 +41,7 @@
 		CD49222E22A47CF0003DB2EE /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD49222D22A47CF0003DB2EE /* SnapshotHelper.swift */; };
 		CD49223322AC5DCF003DB2EE /* Date+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD49223222AC5DCF003DB2EE /* Date+extensions.swift */; };
 		CD49223522AC61C1003DB2EE /* UICollection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD49223422AC61C1003DB2EE /* UICollection+Extensions.swift */; };
-		CD4F9752242D3C45009839C6 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD4F9751242D3C45009839C6 /* SwiftPackageProductDependency */; };
+		CD4F9752242D3C45009839C6 /* FontAwesome in Frameworks */ = {isa = PBXBuildFile; productRef = CD4F9751242D3C45009839C6 /* FontAwesome */; };
 		CD4F9756242D8D23009839C6 /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD4F9753242D8D23009839C6 /* Font Awesome 5 Brands-Regular-400.otf */; };
 		CD4F9757242D8D23009839C6 /* Font Awesome 5 Free-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD4F9754242D8D23009839C6 /* Font Awesome 5 Free-Solid-900.otf */; };
 		CD4F9758242D8D23009839C6 /* Font Awesome 5 Free-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD4F9755242D8D23009839C6 /* Font Awesome 5 Free-Regular-400.otf */; };
@@ -168,7 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD4F9752242D3C45009839C6 /* BuildFile in Frameworks */,
+				CD4F9752242D3C45009839C6 /* FontAwesome in Frameworks */,
 				1111C83B336FF84A88034FAB /* Pods_SmartWallet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,7 +196,6 @@
 				41730517E251EA4680A95B5E /* Pods-SmartWallet.debug.xcconfig */,
 				608A9ADD8B66B53345A6D826 /* Pods-SmartWallet.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -431,7 +430,7 @@
 			);
 			name = SmartWallet;
 			packageProductDependencies = (
-				CD4F9751242D3C45009839C6 /* SwiftPackageProductDependency */,
+				CD4F9751242D3C45009839C6 /* FontAwesome */,
 			);
 			productName = SmartWallet;
 			productReference = CD0F71162014D379000B2BCD /* SmartWallet.app */;
@@ -511,7 +510,7 @@
 			);
 			mainGroup = CD0F710D2014D378000B2BCD;
 			packageReferences = (
-				CD4F9750242D3C45009839C6 /* RemoteSwiftPackageReference */,
+				CD4F9750242D3C45009839C6 /* XCRemoteSwiftPackageReference "FontAwesome.swift" */,
 			);
 			productRefGroup = CD0F71172014D379000B2BCD /* Products */;
 			projectDirPath = "";
@@ -845,14 +844,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;
-				DEVELOPMENT_TEAM = VQ3DDEUQ7K;
+				DEVELOPMENT_TEAM = ETLU3FSAXD;
 				INFOPLIST_FILE = SmartWallet/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.novinfard.SmartWallet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.SmartWallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -866,14 +865,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;
-				DEVELOPMENT_TEAM = VQ3DDEUQ7K;
+				DEVELOPMENT_TEAM = ETLU3FSAXD;
 				INFOPLIST_FILE = SmartWallet/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.novinfard.SmartWallet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.SmartWallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1016,7 +1015,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CD4F9750242D3C45009839C6 /* RemoteSwiftPackageReference */ = {
+		CD4F9750242D3C45009839C6 /* XCRemoteSwiftPackageReference "FontAwesome.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/thii/FontAwesome.swift.git";
 			requirement = {
@@ -1027,9 +1026,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CD4F9751242D3C45009839C6 /* SwiftPackageProductDependency */ = {
+		CD4F9751242D3C45009839C6 /* FontAwesome */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD4F9750242D3C45009839C6 /* RemoteSwiftPackageReference */;
+			package = CD4F9750242D3C45009839C6 /* XCRemoteSwiftPackageReference "FontAwesome.swift" */;
 			productName = FontAwesome;
 		};
 /* End XCSwiftPackageProductDependency section */
