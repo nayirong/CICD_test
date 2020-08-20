@@ -16,4 +16,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: clean and test
-      run: xcodebuild clean test -scheme $SCHEME -destination "platform=iOS Simulator,name=$DEVICE"
+      run: xcodebuild clean -scheme $SCHEME -destination "platform=iOS Simulator,name=$DEVICE"
