@@ -29,10 +29,10 @@ jobs:
 #     - name: test
 #       run: xcodebuild test-without-building -project SmartWallet.xcodeproj -scheme "SmartWalletUITests" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 11,OS=13.6" 
       #run: xcodebuild -workspace SmartWallet.xcworkspace -scheme "SmartWalletUITests" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 11,OS=13.6" test-without-building
-    - name: GitHub Action for Trello
-      uses: awais786327/ifttt-action@v1.0
+    - name: Attach to Trello Card
+      uses: delivered/attach-to-trello-card-action@v2.0.0
       with:
-        # number of milliseconds to wait
-        milliseconds: 500 # default is 1000
-        # Your secret IFTTT webhooks key
-        # default is EoNxVmkmo3cxJQct-8MvT
+       # (public) Trello auth key for account
+        trello-key: f4912fa0a4f8b65009b7c563b904261b
+       # secret Trello auth token for account
+        trello-token: 17fcddca2f1429d507ec6797049f2bced793ca6a3b3ac5dbb91950eda6001f4e
