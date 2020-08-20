@@ -65,6 +65,26 @@
          </BuildableReference>
       </MacroExpansion>
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CD49222222A47B72003DB2EE"
+               BuildableName = "SmartWalletUITests.xctest"
+               BlueprintName = "SmartWalletUITests"
+               ReferencedContainer = "container:SmartWallet.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CD152F8A231C4A660042A6E8"
+               BuildableName = "SmartWalletTests.xctest"
+               BlueprintName = "SmartWalletTests"
+               ReferencedContainer = "container:SmartWallet.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

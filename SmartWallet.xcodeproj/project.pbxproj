@@ -41,7 +41,7 @@
 		CD49222E22A47CF0003DB2EE /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD49222D22A47CF0003DB2EE /* SnapshotHelper.swift */; };
 		CD49223322AC5DCF003DB2EE /* Date+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD49223222AC5DCF003DB2EE /* Date+extensions.swift */; };
 		CD49223522AC61C1003DB2EE /* UICollection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD49223422AC61C1003DB2EE /* UICollection+Extensions.swift */; };
-		CD4F9752242D3C45009839C6 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD4F9751242D3C45009839C6 /* SwiftPackageProductDependency */; };
+		CD4F9752242D3C45009839C6 /* FontAwesome in Frameworks */ = {isa = PBXBuildFile; productRef = CD4F9751242D3C45009839C6 /* FontAwesome */; };
 		CD4F9756242D8D23009839C6 /* Font Awesome 5 Brands-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD4F9753242D8D23009839C6 /* Font Awesome 5 Brands-Regular-400.otf */; };
 		CD4F9757242D8D23009839C6 /* Font Awesome 5 Free-Solid-900.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD4F9754242D8D23009839C6 /* Font Awesome 5 Free-Solid-900.otf */; };
 		CD4F9758242D8D23009839C6 /* Font Awesome 5 Free-Regular-400.otf in Resources */ = {isa = PBXBuildFile; fileRef = CD4F9755242D8D23009839C6 /* Font Awesome 5 Free-Regular-400.otf */; };
@@ -168,7 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD4F9752242D3C45009839C6 /* BuildFile in Frameworks */,
+				CD4F9752242D3C45009839C6 /* FontAwesome in Frameworks */,
 				CCE59F45066D2EEBE802C602 /* Pods_SmartWallet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,7 +430,7 @@
 			);
 			name = SmartWallet;
 			packageProductDependencies = (
-				CD4F9751242D3C45009839C6 /* SwiftPackageProductDependency */,
+				CD4F9751242D3C45009839C6 /* FontAwesome */,
 			);
 			productName = SmartWallet;
 			productReference = CD0F71162014D379000B2BCD /* SmartWallet.app */;
@@ -510,7 +510,7 @@
 			);
 			mainGroup = CD0F710D2014D378000B2BCD;
 			packageReferences = (
-				CD4F9750242D3C45009839C6 /* RemoteSwiftPackageReference */,
+				CD4F9750242D3C45009839C6 /* XCRemoteSwiftPackageReference "FontAwesome.swift" */,
 			);
 			productRefGroup = CD0F71172014D379000B2BCD /* Products */;
 			projectDirPath = "";
@@ -725,6 +725,136 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		17561BC124EEE5BD00011438 /* xctest */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"XCTEST=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = xctest;
+		};
+		17561BC224EEE5BD00011438 /* xctest */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF510E42D4608F42F234594D /* Pods-SmartWallet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
+				DEVELOPMENT_TEAM = ETLU3FSAXD;
+				INFOPLIST_FILE = SmartWallet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.SmartWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = xctest;
+		};
+		17561BC324EEE5BD00011438 /* xctest */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = VQ3DDEUQ7K;
+				INFOPLIST_FILE = SmartWalletUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.novinfard.SmartWalletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SmartWallet;
+			};
+			name = xctest;
+		};
+		17561BC424EEE5BD00011438 /* xctest */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = VQ3DDEUQ7K;
+				INFOPLIST_FILE = SmartWalletTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.novinfard.SmartWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SmartWallet.app/SmartWallet";
+			};
+			name = xctest;
+		};
 		CD0F71262014D379000B2BCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -980,6 +1110,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD0F71262014D379000B2BCD /* Debug */,
+				17561BC124EEE5BD00011438 /* xctest */,
 				CD0F71272014D379000B2BCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -989,6 +1120,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD0F71292014D379000B2BCD /* Debug */,
+				17561BC224EEE5BD00011438 /* xctest */,
 				CD0F712A2014D379000B2BCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -998,6 +1130,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD152F93231C4A660042A6E8 /* Debug */,
+				17561BC424EEE5BD00011438 /* xctest */,
 				CD152F94231C4A660042A6E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1007,6 +1140,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD49222A22A47B72003DB2EE /* Debug */,
+				17561BC324EEE5BD00011438 /* xctest */,
 				CD49222B22A47B72003DB2EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1015,7 +1149,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CD4F9750242D3C45009839C6 /* RemoteSwiftPackageReference */ = {
+		CD4F9750242D3C45009839C6 /* XCRemoteSwiftPackageReference "FontAwesome.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/thii/FontAwesome.swift.git";
 			requirement = {
@@ -1026,9 +1160,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CD4F9751242D3C45009839C6 /* SwiftPackageProductDependency */ = {
+		CD4F9751242D3C45009839C6 /* FontAwesome */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD4F9750242D3C45009839C6 /* RemoteSwiftPackageReference */;
+			package = CD4F9750242D3C45009839C6 /* XCRemoteSwiftPackageReference "FontAwesome.swift" */;
 			productName = FontAwesome;
 		};
 /* End XCSwiftPackageProductDependency section */
