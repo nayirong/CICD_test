@@ -18,7 +18,7 @@ jobs:
       uses: jessicazu/trello-github-actions@v1.0
       env:
         TRELLO_API_KEY: f4912fa0a4f8b65009b7c563b904261b
-        TRELLO_API_TOKEN: ${{ secrets.TRELLO_TOKEN }}
+        TRELLO_API_TOKEN: 17fcddca2f1429d507ec6797049f2bced793ca6a3b3ac5dbb91950eda6001f4e # ${{ secrets.TRELLO_TOKEN }}
         TRELLO_BOARD_ID: 5f3ec5457ef52c3882ac185f
         TRELLO_LIST_ID: 5f3ec743ddc6e422eaa346e3
         TRELLO_DEPARTURE_LIST_ID: create_card_when_issue_open
