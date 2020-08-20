@@ -22,4 +22,4 @@ jobs:
     - name: Run tests
       #run: swift test -v
       #run: xcodebuild test-without-building -xctestrun $(find . -type f -name "*.xctestrun") -destination "platform=iOS Simulator,name=$DEVICE" -derivedDataPath $DERIVED_DATA_PATH -enableCodeCoverage YES -only-testing:$UI_TEST_TARGET 
-      run: xcodebuild test-without-building -destination "platform=iOS Simulator,name=$DEVICE" #-derivedDataPath $DERIVED_DATA_PATH -enableCodeCoverage YES -only-testing:$UI_TEST_TARGET 
+      run: xcodebuild test-without-building -scheme $SCHEME -destination "platform=iOS Simulator,name=$DEVICE" #-derivedDataPath $DERIVED_DATA_PATH -enableCodeCoverage YES -only-testing:$UI_TEST_TARGET 
