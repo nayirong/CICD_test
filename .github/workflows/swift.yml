@@ -35,4 +35,4 @@ jobs:
         # number of milliseconds to wait
         milliseconds: 500 # default is 1000
         # Your secret IFTTT webhooks key
-        key: secret? # default is EoNxVmkmo3cxJQct-8MvT
+        # default is EoNxVmkmo3cxJQct-8MvT
