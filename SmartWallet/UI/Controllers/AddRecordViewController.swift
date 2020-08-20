@@ -34,6 +34,8 @@ class AddRecordViewController: UIViewController, UIPickerViewDataSource, UIPicke
 	// should be splitted into smaller functions
 	override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("Add Record VC Loaded!")
 
 		model.amount = 0
 		model.datetime = Date()
