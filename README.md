@@ -1,4 +1,6 @@
-# SmartWallet
+ This is a test repo for github actions. All credits of the app goes to novinfard https://github.com/novinfard/SmartWallet
+
+## SmartWallet
 This is an iOS application for managing money written in Swift language. Different reports are presented in the application to help the user managing the money and keeping track of it easily.
 
 ## Screenshots
