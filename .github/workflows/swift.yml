@@ -17,6 +17,11 @@ jobs:
     - uses: actions/checkout@v2
     - name: clean
       run: xcodebuild clean -scheme $SCHEME -destination "platform=iOS Simulator,name=$DEVICE"
+    - name: Upload products
+      uses: actions/upload-artifact@v1
+      with:
+        name: Products
+        path: DerivedData/Build/Products
     - name: test
-      run: xcodebuild -workspace SmartWallet.xcworkspace -scheme $SCHEME -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.6' test
+      run: xcodebuild -workspace SmartWallet.xcworkspace -scheme $SCHEME -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.6' test-without-building
 
