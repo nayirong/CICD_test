@@ -16,7 +16,7 @@ class SmartWalletUITests: XCTestCase {
 		continueAfterFailure = false
 
 		let app = XCUIApplication()
-		setupSnapshot(app)
+		//setupSnapshot(app)
 		app.launch()
     }
 
